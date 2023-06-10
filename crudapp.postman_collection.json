@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "483c3da3-6948-45cf-a55c-f23c6341104e",
+		"name": "crudapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27172206"
+	},
+	"item": [
+		{
+			"name": "add-hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"great hotel\",\r\n    \"address\": \"home, 11, Moscow\",\r\n    \"price\": 11,\r\n    \"description\": \"the best of the best\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/addHotel",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"addHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all-hotels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/hotels",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-hotel-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/hotels/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hotels",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelId\": 1,\r\n    \"rating\": 4,\r\n    \"review\": \"good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/reviews/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/bookings",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
